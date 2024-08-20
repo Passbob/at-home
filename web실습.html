@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>(input 값 : 5 -> alert으로 출력된 값 : 15)</p>
+<input id="five" type="text"><input id="plus" type="button" value="클릭">
+
+<script>
+    const $five = document.getElementById('five');
+    const $plus = document.getElementById('plus');
+        $plus.onclick = e => {
+        alert(Number($five.value)+10);
+        }
+</script>
+
+<h3>라디오버튼을 클릭하면 value값을 이용해 해당 사이트로 이동해주세요.</h3>
+<input id="naver" type="radio" name="web"><label for="naver">네이버</label><br>
+<input id="goo" type="radio" name="web"><label for="goo">구글</label><br>
+<input id="w3" type="radio" name="web"><label for="w3">w3schools</label>
+
+<script>
+    const naver = document.getElementById('naver');
+    const goo = document.getElementById('goo');
+    const w3 = document.getElementById('w3');
+
+
+    naver.onclick = e => {
+        location.href = 'https://www.naver.com/';
+    }
+    goo.addEventListener('click', e => {
+        location.href = 'https://www.google.com/';
+    })
+    w3.addEventListener('click', e => {
+        location.href = 'https://www.w3schools.com/';
+    })
+//타겟 블링크는 targe="blank" 어디다 써야 좋을까요?
+
+</script>
+
+<h3>버튼을 클릭하면, 첫번째 체크박스의 항목을 체크해 주세요</h3>
+
+<input id="java" type="checkbox" name="tech" ><label for="java">Java</label><br>
+<input id="DB" type="checkbox" name="tech" ><label for="DB">DataBase</label><br>
+<input id="Web" type="checkbox" name="tech" ><label for="Web">Web</label><br>
+<input id="click" type="button" value="클릭">
+
+<script>
+    const java = document.querySelector('#java');
+    const btn = document.getElementById('click');
+    const btnch = java.getAttribute('checked');
+    btn.onclick = e => {
+        java.checked = true;
+            console.log(java.checked);
+    }
+    
+
+</script>
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
