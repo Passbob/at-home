@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색</title>
+    <style>
+        #logo{
+            position: absolute;
+            top: 65px;
+            left: 320px;
+            width: 121px;
+            height: 45px;
+            cursor: pointer;
+        }
+        #headblock{
+            position: absolute;
+            top: 65px;
+            left: 480px;
+            width: 1100px;
+            height: 104px;
+        }
+        .sign{
+            float: right;
+
+        }
+        .textbox{
+            height: 33px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+        .btn{
+            width: 55px;
+            height: 33.63px;
+            border-radius: 16px;
+            border: 0.1px solid gray;
+            margin-left: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .search{
+            width: 560px;
+        }
+        #search-btn{
+            margin-right: 30px;
+        }
+        .id{
+            width: 143px;
+        }
+        .pw{
+            width: 143px;
+
+        }
+        .up{
+            width: 70px;
+        }
+        .sign{
+            margin-left: 700px;
+        }
+
+
+
+        .hot{
+            position: absolute;
+            top: 178px;
+            left: 300px;
+            width: 200px;
+            height: 250px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        .community{
+            position: absolute;
+            top: 442px;
+            left: 297px;
+            width: 203px;
+            height: 210px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        .text{
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .Hot{
+            font-size: 30px;
+        }
+        .Community{
+            font-size: 25px;
+        }
+        .fire{
+            width: 31px;
+            height: 34px;
+        }
+        .list{
+            line-height: 35px;
+        }
+        .now-arrow{
+            position: relative;
+            top: -200px;
+            left: 680px;
+        }
+        .com-arrow{
+            position: relative;
+            top: -20px;
+            left: 145px;
+        }
+
+        .ad1{
+            position: absolute;
+            top: 662px;
+            left: 204px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 286px;
+            height: 260px;
+            border: 1px solid black;
+        }
+        .ad2{
+            position: absolute;
+            top: 400px;
+            left: 1342px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 286px;
+            height: 260px;
+            border: 1px solid black;
+        }
+        .ad-img{
+            height: 100%;
+        }
+
+        #bodyblock{
+            position: absolute;
+            top: 178px;
+            left: 530px;
+            height: 752px;
+            width: 800px;
+            border: 1px solid black;
+        }
+
+
+
+
+        .content{
+            position: absolute;
+            top: 178px;
+            left: 1350px;
+            width: 286px;
+            height: 464px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        .Content{
+            font-size: 35px;
+            color: rgba(0,0,0,0.6);
+        }
+        .contentbox1{
+            position: relative;
+            top: 10px;
+            left: 25px;
+            width: 232px;
+            height: 159px;
+            text-align: center;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .contentbox2{
+            position: relative;
+            top: 30px;
+            left: 25px;
+            width: 232px;
+            height: 159px;
+            text-align: center;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .contentboxidx{
+            position: relative;
+            top: 111px;
+            left: -1px;
+            width: 232px;
+            height: 46px;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 0px 0px 8px 8px;
+            align-content: center;
+        }
+        .con-arrow{
+            position: relative;
+            left: 260px;
+            top: 60px;
+            height: 20px;
+        }
+        #bodybar{
+            width: 740px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .barline{
+            margin-top: 15px;
+            height: 1px;
+            background-color: black;
+        }
+        #bartext{
+            margin-left: 20px;
+        }
+        .bartext{
+            margin-left: 10px;
+        }
+        .barclick{
+            font-size: 18px;
+            background-color: white;
+            border: 0px;
+            cursor: pointer;
+        }
+        #bodylogo{
+            position: absolute;
+            top: 300px;
+            left: 320px;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+        #bodytext{
+            position: absolute;
+            top: 355px;
+            left: 260px;
+        }
+        #cmbar{
+            position: absolute;
+            top: 600px;
+            left: 120px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        #homebar{
+            position: absolute;
+            top: 600px;
+            left: 350px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        #cnbar{
+            position: absolute;
+            top: 600px;
+            left: 540px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .select{
+            font-weight: 900;
+            text-decoration: underline;
+        }
+        #foot{
+            position: absolute;
+            top: 940px;
+            left: 1420px; 
+            width: 500px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo"><img  class="logo"  src="./picture/logo2.png">  </div>
+    <div id="headblock">
+        <input class="textbox search" type="text"><input id="search-btn" class="btn" type="button" value="검색">
+        ID: <input class="textbox id" type="text">
+        PW: <input class="textbox pw" type="password"><input id="login"  class="btn" type="button" value="로그인">
+        <div class="sign">아직 회원이 아니신가요? <input id="sign-up"  class="btn up" type="button" value="회원가입"></div>
+    </div>
+
+    <div class="hot">
+        <div class="text Hot">Hot<img class="fire" src="./picture/fire.png"> </div>
+        <div class="ranking">
+            <ol class="list">
+                <li>주술회전</li>
+                <li>귀멸의 칼날</li>
+                <li>짱구는 못말려</li>
+                <li>도라에몽</li>
+                <li>최애의 아이</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="community">
+        <div class="text Community">Community</div>
+            <ul class="list">
+                <li>ㄴ</li>
+                <li>ㄴ</li>
+                <li>ㄴ</li>
+                <li>ㄴ</li>
+                <img class="com-arrow" src="./picture/Arrow 3.png">
+            </ul>
+    </div>
+    <span class="ad1">
+        <img class="ad-img" src="./picture/짱구.webp">
+    </span>
+    <span class="ad2">
+        <img class="ad-img" src="./picture/짱구.webp">
+    </span>
+
+    <div id="bodyblock">
+        <div id="bodybar">
+            <div id="bartext">
+                <span class="bartext"><input id="totalclick" class="barclick select" type="button" value="통합검색"></span>
+                <span class="bartext"><input id="cmclick" class="barclick" type="button" value="커뮤니티"></span>
+                <span class="bartext"><input id="cnclick" class="barclick" type="button" value="콘텐츠"></span>
+            </div>
+            <div class="barline"></div>
+        </div>
+        <div id="bodylogo"><img  class="logo"  src="./picture/logo2.png">  </div>
+        <div id="bodytext"><span id="search_data"></span> 와 관련된 검색어를 찾지 못했습니다.</div>
+        <div id="cmbar">
+            <input class="barclick" type="button" value="Community">
+            <div class="barline"></div>
+        </div>
+        <div id="homebar">
+            <input class="barclick" type="button" value="Home">
+            <div class="barline"></div>
+        </div>
+        <div id="cnbar">
+            <input class="barclick" type="button" value="Content">
+            <div class="barline"></div>
+        </div>
+    </div>
+
+    <div class="content block">
+        <div class="text Content">Content</div>
+        <div id="name-quiz" class="block">
+            <div class="contentbox1 block">
+                <div class="contentboxidx">애니 주인공 맞히기</div>
+            </div>
+        </div>
+        <div id="with-naruto" class="block">
+            <div class="contentbox2 block">
+                <div class="contentboxidx">나루토랑 밥먹기</div>
+            </div>
+        </div>
+        <div class="block">
+        <img class="con-arrow" src="./picture/Group 6.png">
+        </div>
+    </div>
+    <div id="foot">
+        ⓒ Cho comics Corp. tel 010-4163-0989
+    </div>
+
+    <script>
+        const sign_up = document.getElementById('sign-up');
+    sign_up.addEventListener('click', function(){
+        window.open('./sign-up.html', '회원가입', 'width=500px, height=450px');
+    })
+        const search = document.getElementById('search-btn');
+        search.addEventListener('click', function(){
+        location.href = ('./search.html')
+    })
+        const logo = document.getElementById('logo');
+        logo.addEventListener('click', function(){
+        location.href = ('./main.html')
+    })
+        const name_quiz = document.getElementById('name-quiz');
+        name_quiz.addEventListener('click', function(){
+        location.href = ('./name-quiz.html')
+    })
+        const with_naruto = document.getElementById('with-naruto');
+        with_naruto.addEventListener('click', function(){
+        location.href = ('./with-naruto.html')
+    })
+
+    const bodylogo = document.getElementById('bodylogo');
+        bodylogo.addEventListener('click', function(){
+        location.href = ('./main.html')
+    })
+    const Home = document.getElementById('homebar');
+        Home.addEventListener('click', function(){
+        location.href = ('./main.html')
+    })
+
+
+    const search_data = localStorage.getItem('입력 값');
+    document.getElementById('search_data').innerHTML = search_data;
+
+
+
+    const totalclick = document.getElementById('totalclick');
+    const cmclick = document.getElementById('cmclick');
+    const cnclick = document.getElementById('cnclick');
+    totalclick.addEventListener('click', function(){
+        totalclick.classList.add('select');
+        cmclick.classList.remove('select');
+        cnclick.classList.remove('select');
+    }
+    )
+    cmclick.addEventListener('click', function(){
+        totalclick.classList.remove('select');
+        cmclick.classList.add('select');
+        cnclick.classList.remove('select');
+    }
+    )
+    cnclick.addEventListener('click', function(){
+        totalclick.classList.remove('select');
+        cmclick.classList.remove('select');
+        cnclick.classList.add('select');
+    }
+    )
+
+
+    </script>
+
+
+
+</body>
+</html>

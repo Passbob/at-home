@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Home</title>
+    <style>
+        #headLogo{
+            position: absolute;
+            top: 38px;
+            left: 802px;
+            cursor: pointer;
+        }
+        .logo{
+            width: 275px;
+            height: 108px;
+        }
+        #headblock{
+            position: absolute;
+            top: 164px;
+            left: 445px;
+            width: 990px;
+            height: 104px;
+        }
+        .sign{
+            position: relative;
+
+        }
+        .textbox{
+            height: 33px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+        .btn{
+            width: 55px;
+            height: 33.63px;
+            border-radius: 16px;
+            border: 0.1px solid gray;
+            margin-left: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .search{
+            width: 459px;
+        }
+        .id{
+            width: 143px;
+        }
+        .pw{
+            width: 143px;
+
+        }
+        .up{
+            width: 70px;
+        }
+        .sign{
+            margin-left: 700px;
+        }
+        #bodyblock{
+            position: absolute;
+            top: 250px;
+            left: 445px;
+            width: 990px;
+            height: 427px;
+            border: 1px solid black;
+            background-color: rgba(191,191,223,0.78);
+        }
+        #underbody{
+            position: absolute;
+            top: 710px;
+            left: 449px; 
+            width: 981px;
+            height: 269px;
+        }
+        #foot{
+            position: absolute;
+            top: 999px;
+            left: 1340px; 
+            width: 500px;
+            font-size: 10px;
+        }
+        .now{
+            position: relative;
+            top: 30px;
+            left: 30px; 
+            width: 700px;
+            height: 366px;
+            border: 1px solid black;
+            background-color: white;
+        }
+        .hot{
+            position: relative;
+            top: -338px;
+            left: 780px;
+            width: 178px;
+            height: 200px;
+            border: 1px solid rgba(0,0,0,0.2);
+            background-color: white;
+        }
+        .community{
+            position: relative;
+            top: -326px;
+            left: 760px;
+            width: 203px;
+            height: 151px;
+            border: 1px solid rgba(0,0,0,0.2);
+            background-color: white;
+        }
+        .text{
+            margin-top: 10px;
+            margin-left: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .Now{
+            font-size: 45px;
+            color: rgba(0,0,0,0.6);
+            
+        }
+        .play{
+            position: relative;
+            top: 10px;
+            left: 10px;
+            width: 470px;
+            height: 270px;
+            border: 1px solid black;
+            
+        }
+        .playlogo{
+            position: relative;
+            top: -230px;
+            left: 23px;
+            width: 177px;
+            height: 34px;
+        }
+        .playidx{
+            position: relative;
+            top: -220px;
+            left: 500px;
+            width: 177px;
+            height: auto;
+            text-align: center;
+            font-size: 12px;
+        }
+        .Hot{
+            font-size: 30px;
+        }
+        .Community{
+            font-size: 25px;
+        }
+        .fire{
+            width: 31px;
+            height: 34px;
+        }
+        .list{
+            line-height: 23px;
+        }
+        .now-arrow{
+            position: relative;
+            top: -190px;
+            left: 680px;
+        }
+        .com-arrow{
+            position: relative;
+            top: -20px;
+            left: 145px;
+        }
+        .content{
+            position: relative;
+            width: 582px;
+            height: 269px;
+            border: 1px solid black;
+        }
+        .Content{
+            font-size: 35px;
+            color: rgba(0,0,0,0.6);
+        }
+        .contentbox1{
+            position: relative;
+            left: 10px;
+            width: 232px;
+            height: 209px;
+            text-align: center;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .contentbox2{
+            position: relative;
+            left: 20px;
+            width: 232px;
+            height: 209px;
+            text-align: center;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .contentboxidx{
+            position: relative;
+            top: 161px;
+            left: -1px;
+            width: 232px;
+            height: 46px;
+            border: 0.2px solid rgba(0,0,0,0.2);
+            border-radius: 0px 0px 8px 8px;
+            align-content: center;
+        }
+        .con-arrow{
+            position: relative;
+            left: 70px;
+            top: 70px;
+            height: 20px;
+        }
+        .block{
+            display: inline-block;
+        }
+        .ad{
+            float: right;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 326px;
+            height: 260px;
+            border: 1px solid black;
+        }
+        .ad-img{
+            height: 100%;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <div id="headLogo"><img  class="logo"  src="./picture/logo.png">  </div>
+    <div id="headblock">
+        <input id="search_v" class="textbox search" type="text"><input id="search-btn" class="btn" type="button" value="검색">
+        ID: <input class="textbox id" type="text">
+        PW: <input class="textbox pw" type="password"><input id="login"  class="btn" type="button" value="로그인">
+        <div class="sign">아직 회원이 아니신가요? <input id="sign-up"  class="btn up" type="button" value="회원가입"></div>
+    </div>
+    <div id="bodyblock">
+        <div class="now">
+            <div class="text Now">Now</div>
+            <iframe class="play" src="https://www.youtube.com/embed/ykCNYPnlSfA?si=oMQBfrPk416nKYTq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <img  class="playlogo"  src="./picture/최애의 아이.svg">
+            <div class="playidx">“이 연예계세계에서 거짓말은 무기다.”<br>지방 도시에서 일하는
+                산부인과 의사고로.<br>어느 날, ‘최애’ 아이돌 'B코마치'의 
+                멤버 아이가 그의 앞에 나타난다. <br>그녀는 어떤 금단의 비밀을 품고 있었는데...<br>그런 두 사람의 ‘최악’의 만남에서부터 운명이 움직이기 시작한다.</div>
+            <img class="now-arrow" src="./picture/Arrow 3.png">
+        </div>
+        <div class="hot">
+            <div class="text Hot">Hot<img class="fire" src="./picture/fire.png"> </div>
+            <div class="ranking">
+                <ol class="list">
+                    <li>주술회전</li>
+                    <li>귀멸의 칼날</li>
+                    <li>짱구는 못말려</li>
+                    <li>도라에몽</li>
+                    <li>최애의 아이</li>
+                </ol>
+            </div>
+        </div>
+        <div class="community">
+            <div class="text Community">Community</div>
+                <ul class="list">
+                    <li>ㄴ</li>
+                    <li>ㄴ</li>
+                    <li>ㄴ</li>
+                    <li>ㄴ</li>
+                    <img class="com-arrow" src="./picture/Arrow 3.png">
+                </ul>
+        </div>
+    </div>
+    <div id="underbody" class="block">
+        <div class="content block">
+            <div class="text Content">Content</div>
+            <div id="name-quiz" class="block">
+                <div class="contentbox1 block">
+                    <div class="contentboxidx">애니 주인공 맞히기</div>
+                </div>
+            </div>
+            <div id="with-naruto" class="block">
+                <div class="contentbox2 block">
+                    <div class="contentboxidx">나루토랑 밥먹기</div>
+                </div>
+            </div>
+            <div class="block">
+            <img class="con-arrow" src="./picture/Group 6.png">
+            </div>
+        </div>
+        <span class="ad">
+            <img class="ad-img" src="./picture/짱구.webp">
+        </span>
+    </div>
+
+    <div id="foot">
+        ⓒ Cho comics Corp. tel 010-4163-0989
+    </div>
+<script>
+        const sign_up = document.getElementById('sign-up');
+    sign_up.addEventListener('click', function(){
+        window.open('./sign-up.html', '회원가입', 'width=500px, height=450px');
+    })
+
+    const search = document.getElementById('search-btn');
+
+
+    search.addEventListener('mousedown',search_send())
+    function search_send(){
+        const search_v = document.getElementById('search_v');
+        localStorage.setItem("입력 값", search_v.value);
+    }
+
+        search.addEventListener('click', function(){
+        location.href = ('./search.html')
+    })
+        const logo = document.getElementById('headLogo');
+        logo.addEventListener('click', function(){
+        location.href = ('./main.html')
+    })
+        const name_quiz = document.getElementById('name-quiz');
+        name_quiz.addEventListener('click', function(){
+        location.href = ('./name-quiz.html')
+    })
+        const with_naruto = document.getElementById('with-naruto');
+        with_naruto.addEventListener('click', function(){
+        location.href = ('./with-naruto.html')
+    })
+
+    
+    
+
+
+</script>
+
+
+<!-- https://velog.io/@rkio/Javascript-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%84-%EC%A0%95%EB%B3%B4-%EC%A0%84%EB%8B%AC-%EB%B0%A9%EB%B2%95-localStorage-sessionStorage
+    페이지 간 정보 전달하는 방법->내일 검색에다가 써보자
+-->
+
+
+</body>
+</html>
