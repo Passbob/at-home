@@ -1,2 +1,2 @@
-const inputData = 123;
-localStorage.setItem('검색 값', inputData);
+const inputData = 123
+localStorage.setItem('변경값',inputData);
