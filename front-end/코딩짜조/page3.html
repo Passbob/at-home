@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .idCard{
+            width: 421px;
+            height: 300px;
+        }
+        #cho{
+            position: absolute;
+            left: 230px;
+            top: 500px;
+            background-image: url(./picture/cho.png);
+        }
+        #lee{
+            position: absolute;
+            left: 731px;
+            top: 420px;
+            background-image: url(./picture/lee.png);
+        }
+        #gang{
+            position: absolute;
+            left: 1232px;
+            top: 500px;
+            background-image: url(./picture/lee.png);
+        }
+        .gitLink{
+            position: absolute;
+            left: 270px;
+            top: 245px;
+            width: 48px;
+            height: 46px;
+            background-image: url(./picture/link.png);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="cho" class="idCard">
+        <div id="choLink" class="gitLink"></div>
+    </div>
+    <div id="lee" class="idCard">
+        <div id="leeLink" class="gitLink"></div>
+    </div>
+    <div id="gang" class="idCard">
+        <div id="gangLink" class="gitLink"></div>
+    </div>
+
+<script>
+    const choLink = document.getElementById('choLink')
+    choLink.addEventListener('click', function(){
+        window.open('https://github.com/Passbob')
+    })
+    // const leeLink = document.getElementById('leeLink')
+    // choLink.addEventListener('click', function(){
+    //     window.open('https://github.com/Passbob')
+    // })
+    // const gangLink = document.getElementById('gangLink')
+    // choLink.addEventListener('click', function(){
+    //     window.open('https://github.com/Passbob')
+    // })
+
+</script>
+
+</body>
+</html>
