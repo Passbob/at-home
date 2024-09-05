@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            color: white;
+            background-color: black;
+            width: 100px;
+            border-radius: 12px;
+        }
+        .textArea{
+            font-size: 25px;
+        }
+        .btn{
+            border-radius: 999px;
+            width: 100px;
+            height: 100px;
+            margin-left: 80px;
+            font-size: 30px;
+            background-color: aqua;
+            border: 0px;
+            color: white;
+            text-shadow: 1px 1px 1px  black;
+        }
+    </style>
+</head>
+<body>
+    <h3>문제 1</h3>
+    <div id="header" class="main"></div>
+    <script>
+        const header = document.getElementById('header');
+        const main = document.getElementsByClassName('main');
+    </script>
+    <br>
+    <h3>문제 2</h3>
+    <button id="mouseUp">마우스인사</button>
+    <script>
+        const mouseUp = document.getElementById('mouseUp');
+        mouseUp.addEventListener('mouseup', function(){
+            setTimeout(()=> alert('안녕하세요') ,2000)
+        })
+    </script>
+    <br>
+    <h3>문제 3</h3>
+    <button id="reload">새로고침</button>
+    <script>
+        const reload = document.getElementById('reload')
+        reload.addEventListener('click', function(){
+            alert('새로고침 합니다.');
+            location.reload();
+        })
+    </script>
+    <br>
+    <h3>문제 4</h3>
+    <div class="textArea"><span class="text">뒤로가기(←) 버튼</span> & <span class="text">앞으로 가기(→) 버튼</span></div>
+    <button id="back" class="btn">←</button>
+    <button id="go" class="btn">→</button>
+
+    <script>
+        const back = document.getElementById('back');
+        back.addEventListener('click', function(){
+            history.back()
+        })
+        const go = document.getElementById('go');
+        go.addEventListener('click', function(){
+            history.go(1)
+        })
+    </script>
+
+
+
+
+
+</body>
+</html>
