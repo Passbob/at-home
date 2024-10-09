@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>5초인 타이머를 만드세요.</h2>
+    <div id="time">5</div><input id="start" type="button" value="시작">
+
+    <script>
+        const start = document.getElementById('start');
+        let time = 5;
+        let left_time = document.getElementById('time');
+
+        start.addEventListener('click', function(){
+            let stop = setInterval(function(){
+                start.disabled = true;
+                if(time == 0){
+                    alert('타이머 종료');
+                    clearInterval(stop);
+                }else{
+                    --time;
+                    left_time.innerText = time;
+                }
+            }, 1000)
+        })
+
+    </script>
+    <hr>
+    <hr>
+    <h2></h2>
+
+
+</body>
+</html>
