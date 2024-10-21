@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="button" id="startRandom" value="클릭!">
+    <br>
+    <input type="text" placeholder="홀수 or 짝수" id="randomReply">
+    <input type="button" id="randomAns" value="확인">
+
+    <script>
+        let randomNum = 0;
+        const startRandom = document.getElementById('startRandom');
+        const randomReply = document.getElementById('randomReply');
+        const randomAns = document.getElementById('randomAns');
+
+        startRandom.onclick = (e)=> randomNum = Math.floor(Math.random()*100+1);
+
+        randomAns.addEventListener('click', function(){
+            if(randomReply.value == "홀수" && randomNum%2 != 0){
+                alert(`${randomNum}은 홀수가 맞습니다!`);
+            }else if(randomReply.value == "짝수" && randomNum%2 != 0){
+                alert(`${randomNum}은 홀수입니다!`);
+            }else if(randomReply.value == "짝수" && randomNum%2 == 0){
+                alert(`${randomNum}은 짝수가 맞습니다!`);
+            }else{
+                alert(`${randomNum}은 짝수입니다!`);
+            }
+        });
+    </script>
+    
+    <hr>
+
+    <input type="text" placeholder="검색할 내용을 입력해주세요" id="googleSearchValue">
+    <input type="button" id="googleSearch" value="검색">
+
+    <script>
+        const googleSearch = document.getElementById('googleSearch');
+        const googleSearchValue = document.getElementById('googleSearchValue');
+
+        googleSearch.addEventListener('click', function(){
+            location = (`https://www.google.com/search?q=${googleSearchValue.value}`);
+        });
+    </script>
+    <hr>
+    <h3>유령편지에게 편지가 왔습니다. 확인하려면 클릭하세요</h3>
+    <input type="button" id="startLetter" value="편지 읽기">
+    <div id="letterArea">
+        <div id="letter1">안녕? 나는 꼬마 유령이야</div>
+        <br>
+        <div id="letter2">나는 10살이고 달리기를 잘하고 숨바꼭질을 좋아해</div>
+        <br>
+        <div id="letter3">나랑 친구가 되어 같이 숨바꼭질 하지 않을래?</div>
+        <br>
+        <div id="letter4">나랑 놀고싶다면 내일 이시간에 여기로 와줘.</div>
+        <br>
+        <div id="letter5">그럼 기다리고 있을게</div>
+    </div>
+    <script>
+        document.getElementById('letterArea').style.color='rgb(0,0,0,0.5)';
+        document.getElementById('letterArea').style.visibility = 'hidden';
+        document.getElementById("startLetter").addEventListener('click',function(){
+            document.getElementById("startLetter").style.visibility = 'hidden';
+            let i = 1;    
+                let letter = setInterval(function(){
+
+                    if(i==6){            
+                        clearInterval(letter);
+                        document.getElementById("startLetter").style.visibility = 'visible';
+                    }else if(i<=5){
+                        document.getElementById(`letter${i}`).style.visibility = 'visible';
+                        i++;
+                    }
+                },3000)
+        })
+    </script>
+    <hr>
+    <div id="randomColor"></div>
+    <input type="button" id="randomColorBtn" value="클릭">
+    <script>
+        const randomColor = document.getElementById('randomColor');
+        randomColor.style.width = '150px';
+        randomColor.style.height = '150px';
+        randomColor.style.border = '1px solid';
+        
+
+        document.getElementById('randomColorBtn').addEventListener('click', function(){
+            let r = Math.floor(Math.random()*255+1);
+            let g = Math.floor(Math.random()*255+1);
+            let b = Math.floor(Math.random()*255+1);
+            randomColor.style.backgroundColor = `rgb(${r} , ${g} , ${b})`;
+        });
+    </script>
+    <hr>
+    <h3>키보드키를 클릭했을때 어떤키가 나오는지 아래와 같이 만드세요</h3>
+    <input id="message" type="text">
+    <div id="msgArea"></div>
+    <script>
+        const message = document.getElementById('message');
+        const area = document.getElementById('msgArea');
+
+        message.onkeydown = (e) => {
+            area.insertAdjacentHTML('beforeend', 'keydown key=' + e.key + ", code=" + e.code + "<br>");
+        }
+    </script>
+    <hr>
+    <h3>더블 클릭을 만들고 이벤트헨들러 창이 뜨는? 버튼과 창이 뜨지 않게 하는 버튼을 만드세요</h3>
+    <input type="button" id="dbc1" value="더블클릭">
+    <input type="button" id="dbc2" value="더블클릭">
+    <script>
+        document.getElementById('dbc1').addEventListener('dblclick', function(){
+            alert('이벤트헨들러 창?');
+        })
+    </script>
+    <hr>
+    <input id="inputText" type="text">
+    <div id="returnText"></div>
+    <script>
+        document.getElementById('inputText').addEventListener('keyup', function(){
+            document.getElementById('returnText').innerText = document.getElementById('inputText').value
+        })
+    </script>
+    <hr>
+    <div id="mouseBox">여기에 마우스를 올리세요</div>
+    <script>
+        document.getElementById('mouseBox').style.width = '200px'
+        document.getElementById('mouseBox').style.height = '200px'
+        document.getElementById('mouseBox').style.border = '1px solid'
+        document.getElementById('mouseBox').addEventListener('mouseover', function(){
+            document.getElementById('mouseBox').style.backgroundColor = 'red';
+        })
+        document.getElementById('mouseBox').addEventListener('mouseout', function(){
+            document.getElementById('mouseBox').style.backgroundColor = 'white';
+        })
+    </script>
+</body>
+</html>

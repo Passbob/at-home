@@ -71,9 +71,71 @@
             answer.value = ''
         }
     )
-    
+    </script>
+<hr>
+    <h3>페이지를 새로고침하는 버튼을 만드시오</h3>
+    <input type="button" id="reloadBtn" value="새로고침">
 
+    <script>
+        const reloadBtn = document.getElementById('reloadBtn');
+        reloadBtn.addEventListener('click', function(){
+            location.reload();
+        })
+    </script>
 
+    <hr>
+    <h3>가위바위보 게임을 만드시오</h3>
+    <h5>유저에게 가위, 바위, 보 3가지 중 하나를 입력하도록 하고 랜덤으로 나온 가위바위보와 비교해 승 무 패를 알려주세요</h5>
+    <br>
+    <br>
+    <input type="text" id="RSPReply" placeholder="가위, 바위, 보 중 입력해주세요."><input type="button" id="RSPAns" value="가위바위보!">
+
+    <script>
+        const RSPReply = document.getElementById('RSPReply');
+        const RSPAns = document.getElementById('RSPAns');
+        RSPReply.style.width = "250px";
+
+        RSPAns.addEventListener('click', function(){
+            let random =  Math.floor(Math.random()*3+1);
+            let randomRSP = "";
+            if(random == 1){
+                randomRSP = "가위";
+            }else if(random == 2){
+                randomRSP = "바위";
+            }else{
+                randomRSP = "보";
+            }
+
+            if(randomRSP == "가위"){
+                if(RSPReply.value == "가위"){
+                    alert("비겼습니다.");
+                }else if(RSPReply.value == "바위"){
+                    alert("이겼습니다.");
+                }else{
+                    alert("졌습니다.");
+                }
+            }
+
+            if(randomRSP == "바위"){
+                if(RSPReply.value == "바위"){
+                    alert("비겼습니다.");
+                }else if(RSPReply.value == "보"){
+                    alert("이겼습니다.");
+                }else{
+                    alert("졌습니다.");
+                }
+            }
+
+            if(randomRSP == "보"){
+                if(RSPReply.value == "보"){
+                    alert("비겼습니다.");
+                }else if(RSPReply.value == "가위"){
+                    alert("이겼습니다.");
+                }else{
+                    alert("졌습니다.");
+                }
+            }
+        })
     </script>
 
 

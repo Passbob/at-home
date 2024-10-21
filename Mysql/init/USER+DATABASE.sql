@@ -1,0 +1,18 @@
+CREATE USER 'chopractice'@'%' IDENTIFIED BY 'chopractice';
+
+DROP DATABASE IF EXISTS MANGGOMDB;
+
+CREATE DATABASE IF NOT EXISTS MANGGOMDB;
+
+GRANT ALL PRIVILEGES ON MANGGOMDB. * TO 'chopractice'@'%';
+
+SHOW GRANTS FOR 'chopractice';
+
+SHOW databases;
+
+USE mysql;
+
+SELECT *
+	FROM user;
+    
+    
